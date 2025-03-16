@@ -2,178 +2,161 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+:root {
+  --background-color: #3e1c64; /* Dark purple that is easier on the eyes */
+  --footer-color: #000000; /* Black for the footer */
+  --header-color: #a86ad1; /* Lighter purple for the header */
+  --text-color: #e6e0e5; /* Light purple or white text */
+}
+
+* {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font: sans-serif;
   vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 html {
   line-height: 1.5;
   font-family: sans-serif;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-color);
 }
+
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
   height: 50px;
   line-height: 50px;
-  background: #00acc1;
+  background: var(--header-color);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-nav ul li {
-  display: block;
-  float: left;
-  width: 33.33%;
-  text-align: center;
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
 }
+
+nav ul li {
+  list-style: none;
+}
+
 nav ul li a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
 }
 
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--footer-color);
+  color: var(--text-color);
+  margin-top: auto;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+#spapp {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 main#spapp > section {
+  flex: 1;
   padding: 60px 10px 10px 10px;
-  background: #ffcdd2;
+  background: var(--background-color);
 }
-main#spapp > section#view_2 {
-  background: #90caf9;
-}
-main#spapp > section#view_3 {
-  background: #a5d6a7;
-}
+
 main#spapp > section#error_404 {
   background: #000000;
-  color: #fff;
+  color: var(--text-color);
 }
+
 main#spapp h1 {
   font-size: 4.2rem;
   line-height: 110%;
   margin: 2.1rem 0 1.68rem 0;
   text-align: center;
+}
+
+iframe {
+  width: 50%;
+  height: 500px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.quiz-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.quiz-item {
+  background-color: var(--text-color);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  width: 85%;
+}
+
+.quiz-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.quiz-link {
+  text-decoration: none;
+  color: var(--background-color);
+  font-weight: bold;
+}
+
+.quiz-link:focus,
+.quiz-link:hover {
+  outline: none;
+  text-decoration: none;
+  color: var(--header-color);
+}
+
+.quiz-item:hover {
+  background-color: #d3d3d3;
 }

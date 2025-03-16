@@ -1,1 +1,36 @@
-<h1>view 2</h1>
+<body>
+  <div class="quiz-container">
+    <h1 class="quiz-title">History Quiz</h1>
+    <div class="question-container">
+      <p class="question-text">What year did the Titanic sink?</p>
+      <div class="answers">
+        <label>
+          <input type="radio" name="answer" value="A" />
+          1905
+        </label>
+        <label>
+          <input type="radio" name="answer" value="B" />
+          1912
+        </label>
+        <label>
+          <input type="radio" name="answer" value="C" />
+          1923
+        </label>
+        <label>
+          <input type="radio" name="answer" value="D" />
+          1930
+        </label>
+      </div>
+    </div>
+    <div class="navigation">
+      <button class="prev-btn" onclick="navigate(-1)">Previous</button>
+      <button class="next-btn" onclick="navigate(1)">Next</button>
+    </div>
+    <div class="progress">
+      Question <span id="current-question">1</span> of
+      <span id="total-questions">10</span>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>

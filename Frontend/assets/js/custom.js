@@ -5,8 +5,11 @@ $(document).ready(function () {
 
   // define routes
   app.route({ view: "about", load: "about.html" });
-  app.route({ view: "view_2", load: "view_2.html" });
-  app.route({ view: "view_3", load: "view_3.html" });
+  app.route({ view: "dashboard", load: "dashboard.html" });
+  app.route({ view: "quiz", load: "quiz.html" });
+  app.route({ view: "quizResults", load: "quizResults.html" });
+  app.route({ view: "quizzes", load: "quizzes.html" });
+  app.route({ view: "user", load: "user.html" });
 
   // run app
   app.run();
