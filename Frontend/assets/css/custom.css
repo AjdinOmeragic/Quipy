@@ -3,10 +3,11 @@
    License: none (public domain)
 */
 :root {
-  --background-color: #3e1c64; /* Dark purple that is easier on the eyes */
-  --footer-color: #000000; /* Black for the footer */
-  --header-color: #a86ad1; /* Lighter purple for the header */
-  --text-color: #e6e0e5; /* Light purple or white text */
+  --background-color: #ffec9e;
+  --footer-color: #000000; 
+  --header-color: #c99157; 
+  --text-color: #000000; 
+  --text-color-white: #ffffff; 
 }
 
 * {
@@ -62,7 +63,7 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: var(--footer-color);
-  color: var(--text-color);
+  color: var(--text-color-white);
   margin-top: auto;
 }
 
@@ -77,7 +78,7 @@ footer li {
 }
 
 footer a {
-  color: var(--text-color);
+  color: var(--text-color-white);
   text-decoration: none;
 }
 
@@ -101,7 +102,7 @@ main#spapp > section {
 
 main#spapp > section#error_404 {
   background: #000000;
-  color: var(--text-color);
+  color:var(--text-color-white);
 }
 
 main#spapp h1 {
@@ -118,45 +119,71 @@ iframe {
   margin-bottom: 20px;
 }
 
-.quiz-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ABOUT SECTION */
+
+#about h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.about-founder h2 {
+  font-size: 1.7em;
+  margin-bottom: 2px;
+}
+
+.about-values h2 {
+  font-size: 1.7em;
+  margin-bottom: 10px;
+}
+
+.about-values ul {
+  list-style: none;
   padding: 0;
-  list-style-type: none;
 }
 
-.quiz-item {
-  background-color: var(--text-color);
+.about-values li {
+  font-size: 1.1em;
   margin: 10px 0;
-  padding: 15px;
+}
+
+/* LOCATION SECTION */
+.about-location {
+  margin: 10px 0;
+}
+
+.about-location h2 {
+  font-size: 1.7em;
+  margin-bottom: 20px;
+}
+
+.about-location p {
+  font-size: 1.1em;
+}
+
+.about-location iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  margin-top: 20px;
   border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  width: 85%;
 }
 
-.quiz-title {
-  font-size: 18px;
-  color: #333;
-}
+@media (min-width: 768px) {
+  #about {
+    padding: 80px 40px;
+  }
 
-.quiz-link {
-  text-decoration: none;
-  color: var(--background-color);
-  font-weight: bold;
-}
+  .about-values,
+  .about-testimonials {
+    padding: 60px 40px;
+  }
 
-.quiz-link:focus,
-.quiz-link:hover {
-  outline: none;
-  text-decoration: none;
-  color: var(--header-color);
-}
-
-.quiz-item:hover {
-  background-color: #d3d3d3;
+  .about-location iframe {
+    height: 500px;
+  }
 }

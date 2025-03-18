@@ -5,11 +5,11 @@ $(document).ready(function () {
 
   // define routes
   app.route({ view: "about", load: "about.html" });
-  app.route({ view: "dashboard", load: "dashboard.html" });
-  app.route({ view: "quiz", load: "quiz.html" });
-  app.route({ view: "quizResults", load: "quizResults.html" });
-  app.route({ view: "quizzes", load: "quizzes.html" });
-  app.route({ view: "user", load: "user.html" });
+  app.route({ view: "home", load: "home.html" });
+  app.route({ view: "breathingExercises", load: "breathingExercises.html" });
+  app.route({ view: "meditation", load: "meditation.html" });
+  app.route({ view: "mood", load: "mood.html" });
+  app.route({ view: "userSetings", load: "userSetings.html" });
 
   // run app
   app.run();
