@@ -10,6 +10,7 @@ $(document).ready(function () {
   app.route({ view: "meditation", load: "meditation.html" });
   app.route({ view: "mood", load: "mood.html" });
   app.route({ view: "userSetings", load: "userSetings.html" });
+  app.route({ view: "journaling", load: "journaling.html" });
 
   // run app
   app.run();
