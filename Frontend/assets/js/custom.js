@@ -6,9 +6,8 @@ $(document).ready(function () {
   // define routes
   app.route({ view: "about", load: "about.html" });
   app.route({ view: "home", load: "home.html" });
-  app.route({ view: "breathingExercises", load: "breathingExercises.html" });
   app.route({ view: "meditation", load: "meditation.html" });
-  app.route({ view: "mood", load: "mood.html" });
+  app.route({ view: "mood", load: "moodTracking.html" });
   app.route({ view: "userSetings", load: "userSetings.html" });
   app.route({ view: "journaling", load: "journaling.html" });
 

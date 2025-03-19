@@ -3,24 +3,25 @@
   <head>
     <title>Quipy</title>
     <meta charset="utf-8" />
-
     <link rel="stylesheet" href="assets/css/spapp.css" />
     <link rel="stylesheet" href="assets/css/custom.css" />
-    <link rel="stylesheet" href="css/spapp.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awsome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <script src="assets/js/resetWindow.js"></script>
+    <!-- Core JS libraries -->
     <script src="js/jquery.min.js"></script>
     <script src="js/spapp.min.js"></script>
   </head>
 
   <body>
-    <!--HEADER-->
+    <!-- HEADER -->
     <header>
       <nav role="navigation">
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li><a href="#home">Quipy</a></li>
           <li><a href="#journaling">Journaling</a></li>
           <li><a href="#meditation">Meditation</a></li>
           <li><a href="#mood">Mood</a></li>
@@ -28,12 +29,11 @@
         </ul>
       </nav>
     </header>
-    <!--MAIN-->
 
+    <!-- MAIN CONTENT AREA -->
     <main id="spapp" role="main">
       <section id="about"></section>
       <section id="home"></section>
-      <section id="breathingExercises"></section>
       <section id="meditation"></section>
       <section id="mood"></section>
       <section id="journaling"></section>
@@ -41,14 +41,39 @@
       <section id="error_404"><h1>Error 404</h1></section>
     </main>
 
-    <!--FOOTER-->
-    <footer>
-      <ul>
-        <li><a href="#about">About</a></li>
-      </ul>
-      <p>© 2025 All rights reserved. Created by Ajdin Omeragic.</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#journaling">Journaling</a></li>
+              <li><a href="#meditation">Meditation</a></li>
+              <li><a href="#mood">Mood</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow me</h4>
+            <div class="social-links">
+              <a href="https://github.com/AjdinOmeragic"
+                ><i class="fab fa-github"></i
+              ></a>
+              <p>© 2025 All rights reserved. Created by Ajdin Omeragic</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <!--SCRIPT STUFF FOR JS-->
     <script
       src="https://code.jquery.com/jquery-3.1.0.min.js"
       integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
@@ -56,5 +81,7 @@
     ></script>
     <script src="assets/js/jquery.spapp.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="/Frontend/assets/js/journaling.js"></script>
+    <script src="/Frontend/assets/js/mood.js"></script>
   </body>
 </html>

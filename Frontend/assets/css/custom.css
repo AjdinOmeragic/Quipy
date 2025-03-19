@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- ROOT COLORS ---------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 :root {
   --background-color: #ffec9e;
   --footer-color: #000000;
@@ -11,6 +15,7 @@
   --border-color: #ddd;
   --add-note-backgroundcolor: #f1f1f1;
   --list-backgroundcolor: #85dcff;
+  --footer-backgroundcolor: #24262b;
 }
 
 * {
@@ -59,35 +64,89 @@ nav ul li a {
   color: var(--text-color);
   text-decoration: none;
 }
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- HEADER-CSS ----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-footer {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  background-color: var(--footer-color);
-  color: var(--text-color-white);
-  margin-top: auto;
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- FOOTER-CSS ----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.container-footer {
+  max-width: 1170px;
+  margin: auto;
 }
-
-footer ul {
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
   list-style: none;
-  padding: 0;
 }
-
-footer li {
-  display: inline;
-  margin: 0 10px;
+.footer {
+  background-color: var(--footer-backgroundcolor);
+  padding: 70px 0;
 }
-
-footer a {
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: var(--text-color-white);
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
   color: var(--text-color-white);
   text-decoration: none;
+  font-weight: 300;
+  color: var(--add-note-backgroundcolor);
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: var(--text-color-white);
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--text-color-white);
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: var(--text-color-white);
 }
 
-footer p {
-  margin-top: 5px;
-  font-size: 14px;
+/*FOR ALL RIGHTS STUFF*/
+.footer-col .social-links p {
+  color: var(--text-color-white) !important;
+  text-align: center;
+  margin-top: 10px;
 }
 
 #spapp {
@@ -122,7 +181,9 @@ iframe {
   margin-bottom: 20px;
 }
 
-/* ABOUT SECTION */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- ABOUT CSS ------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #about h1 {
   font-size: 2.5em;
@@ -175,8 +236,9 @@ iframe {
   margin-top: 20px;
   border-radius: 8px;
 }
-
-/* ------------------ JOURNALING CSS -----------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- JOURNALING CSS ------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #container {
   background-color: var(--text-color-white);
   border-radius: 8px;
@@ -244,12 +306,13 @@ iframe {
 }
 
 ul.notes-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
 }
 
 li.noteslist {
@@ -265,8 +328,9 @@ li.noteslist {
   width: 200px;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 9px 9px 18px #b3b3b3, -9px -9px 118px var(--text-color-white);
+  box-shadow: 9px 9px 18px #b3b3b3, -9px -9px 118px var(--);
 }
+
 li span {
   font-size: 12px;
   flex-grow: 1px;
@@ -276,7 +340,7 @@ li span {
 
 #editBtn,
 #deleteBtn {
-  background-color: #c6aaff;
+  background-color: #2b0d67;
   color: var(--text-color-white);
   border: none;
   padding: 5px 10px;
@@ -292,7 +356,7 @@ li span {
 }
 
 #deleteBtn:hover {
-  background-color: #8c53ff;
+  background-color: #2b0d67;
 }
 
 #editBtn:hover {
@@ -326,7 +390,7 @@ textarea {
   padding: 10px;
   box-sizing: border-box;
   border-radius: 4px;
-  border: 2px solid #8c53ff;
+  border: 2px solid #2b0d67;
 }
 
 #btn-container {
@@ -336,7 +400,7 @@ textarea {
 #submitBtn,
 #closeBtn {
   width: 100px;
-  background-color: #8c53ff;
+  background-color: #2b0d67;
   color: var(--text-color-white);
   font-size: 14px;
   border: none;
@@ -372,7 +436,7 @@ textarea {
 #submitBtn,
 #closeBtn {
   width: 100px;
-  background-color: #8c53ff;
+  background-color: #2b0d67;
   color: #fff;
   font-size: 14px;
   border: none;
@@ -384,6 +448,23 @@ textarea {
 
 #closeBtn {
   background-color: gainsboro;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- MEDIA CSS -----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
