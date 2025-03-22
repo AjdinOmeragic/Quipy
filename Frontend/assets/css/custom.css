@@ -18,6 +18,7 @@
   --footer-backgroundcolor: #24262b;
   --hover-color: #8b8d1e;
   --logo-color: #ffd700;
+  --face-background-color: #c7e660;
 }
 * {
   padding: 0;
@@ -29,6 +30,8 @@
 
 body {
   background: var(--background-color);
+  justify-content: center;
+  align-items: center;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -475,6 +478,249 @@ textarea {
     margin: 8px;
   }
 }
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- MOOD TRACKING CSS ---------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container-mood {
+  width: 90%;
+  max-width: 320px;
+  background: var(--add-note-backgroundcolor);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mood-header h1 {
+  color: var(--text-co);
+  margin-bottom: 5px;
+  font-size: 4px;
+}
+
+.mood-selector {
+  background: var(--background-color);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.mood-selector h2 {
+  font-size: 16px;
+  color: var(--text-color);
+  width: 100%;
+}
+
+.mood-button {
+  background: var(--header-color);
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.mood-button:hover {
+  background: var(--face-background-color);
+  color: var(--hover-color);
+}
+
+.mood-history {
+  margin-top: 15px;
+}
+
+#mood-list {
+  padding: 0;
+}
+
+.mood-entry {
+  background: var(--background-color);
+  color: var(--footer-color);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .container-mood {
+    max-width: 90%;
+  }
+  .mood-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------- QOUTES CSS ----------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.wrapper-quotes {
+  width: 80%;
+  max-width: 605px;
+  background: var(--text-color-white);
+  border-radius: 15px;
+  padding: 30px 30px 25px;
+}
+
+.quote-header {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper-quotes .content-quote {
+  margin: 35px 0;
+}
+
+.content-quote .quote-area {
+  display: flex;
+  justify-content: center;
+}
+
+.quote-area i {
+  font-size: 1rem;
+}
+
+.quote-area i:first-child {
+  margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 3px 10px;
+}
+
+.quote-area .quote {
+  font-size: 1.4rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+.content-quote .qoute-author {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+  font-size: 1.2rem; 
+  font-style: italic;
+}
+
+.qoute-author span:first-child {
+  margin: -7px 5px 0 0;
+  font-family: monospace;
+}
+
+.wrapper-quotes .quote-buttons {
+  border-top: 1px solid #ccc;
+}
+
+.quote-buttons .quote-features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.quote-features ul {
+  display: flex;
+}
+
+.quote-features ul li {
+  list-style: none;
+  margin: 0 5px;
+  height: 47px;
+  width: 47px;
+  border: 2px solid var(--header-color);
+  color: var(--header-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quote-features ul li:hover {
+  color: var(--text-color-white);
+  background: var(--header-color);
+}
+
+.quote-features .new-quote {
+  border: none;
+  outline: none;
+  background: var(--header-color);
+  padding: 13px 22px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem; /* Responsive button text size */
+}
+
+@media only screen and (max-width: 768px) {
+  .quote-header {
+      font-size: 1.8rem;
+  }
+
+  .quote-area .quote {
+      font-size: 1.2rem;
+  }
+
+  .content-quote .qoute-author {
+      font-size: 1rem;
+  }
+
+  .quote-features ul li {
+      height: 40px;
+      width: 40px;
+  }
+
+  .quote-features .new-quote {
+      padding: 10px 18px;
+      font-size: 0.9rem;
+  }
+}
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width: 480px) {
+  .wrapper-quotes {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .quote-header {
+      font-size: 1.6rem;
+  }
+
+  .quote-area .quote {
+      font-size: 1rem;
+  }
+
+  .content-quote .qoute-author {
+      font-size: 0.9rem;
+  }
+
+  .quote-features ul li {
+      height: 35px;
+      width: 35px;
+  }
+
+  .quote-features .new-quote {
+      padding: 8px 16px;
+      font-size: 0.8rem;
+  }
+}
+
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ----------------------- MEDIA CSS -----------------------------------------------------------------------------------------------------------------------------------------*/
