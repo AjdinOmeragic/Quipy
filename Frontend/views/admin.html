@@ -1,4 +1,216 @@
 <!-- ADMIN PANEL -->
+<style>
+  :root {
+    --background-color: #ffec9e;
+    --footer-color: #000000;
+    --header-color: #c99157;
+    --text-color: #000000;
+    --text-color-white: #ffffff;
+    --border-color: #ddd;
+    --add-note-backgroundcolor: #f1f1f1;
+    --list-backgroundcolor: #85dcff;
+    --footer-backgroundcolor: #24262b;
+    --hover-color: #8b8d1e;
+    --logo-color: #ffd700;
+    --face-background-color: #c7e660;
+  }
 
-<h1>Admin</h1>
+  * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
 
+  h1 {
+    color: var(--header-color);
+    margin-bottom: 20px;
+  }
+
+  body {
+    background: var(--background-color);
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .container-admin {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--text-color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-admin {
+    background-color: var(--text-color-white);
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .card-header-admin {
+    background-color: var(--header-color);
+    padding: 10px;
+    color: var(--text-color-white);
+    font-size: 1.5rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .card-body-admin {
+    padding: 20px;
+  }
+
+  .table-admin {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+
+  .table-admin th,
+  .table-admin td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+  }
+
+  .btn-admin {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .btn-admin:hover {
+    background-color: #c82333;
+  }
+
+  .search-section-admin {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-input-admin {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  .search-button-admin {
+    background-color: var(--header-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .search-button-admin:hover {
+    background-color: var(--hover-color);
+  }
+</style>
+<div class="container-admin">
+  <h1 class="text-center">Admin Panel</h1>
+  <div class="search-section-admin">
+    <div>
+      <label for="user-id-search" class="search-label-admin"
+        >Enter User ID to Search:</label
+      >
+      <input
+        type="text"
+        id="user-id-search"
+        class="search-input-admin"
+        placeholder="User ID"
+      />
+    </div>
+    <button class="search-button-admin" onclick="searchUser()">Search</button>
+  </div>
+  <div class="card-admin">
+    <div class="card-header-admin">
+      <h2>User Management</h2>
+    </div>
+    <div class="card-body-admin">
+      <table class="table-admin table-bordered">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="user-list">
+          <tr>
+            <td>john_doe</td>
+            <td>john@example.com</td>
+            <td>
+              <button class="btn-admin btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card-admin">
+    <div class="card-header-admin">
+      <h2>Audio Management</h2>
+    </div>
+    <div class="card-body-admin">
+      <table class="table-admin table-bordered">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Duration</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Relaxing Music</td>
+            <td>3:45</td>
+            <td>
+              <button class="btn-admin btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card-admin">
+    <div class="card-header-admin">
+      <h2>Quote Management</h2>
+    </div>
+    <div class="card-body-admin">
+      <table class="table-admin table-bordered">
+        <thead>
+          <tr>
+            <th>Quote</th>
+            <th>Author</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              "The only limit to our realization of tomorrow is our doubts of
+              today."
+            </td>
+            <td>Franklin D. Roosevelt</td>
+            <td>
+              <button class="btn-admin btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

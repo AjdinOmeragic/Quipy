@@ -1,1 +1,3 @@
 - Quipy a Meditation website that helps users with Anexiety, Depresion, Stress Relife etc...
+
+![Database Schema!!!](assets/img/DATABASE%20SCHEMA.png)
