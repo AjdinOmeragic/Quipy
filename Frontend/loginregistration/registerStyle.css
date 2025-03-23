@@ -1,0 +1,113 @@
+:root {
+  --background-color: #ffec9e;
+  --footer-color: #000000;
+  --header-color: #c99157;
+  --text-color: #000000;
+  --text-color-white: #ffffff;
+  --border-color: #ddd;
+  --add-note-backgroundcolor: #f1f1f1;
+  --list-backgroundcolor: #85dcff;
+  --footer-backgroundcolor: #24262b;
+  --hover-color: #8b8d1e;
+  --logo-color: #ffd700;
+  --face-background-color: #c7e660;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--text-color-white);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--header-color);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--header-color);
+}
+
+.submit-btn {
+  background-color: var(--header-color);
+  color: var(--text-color-white);
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.submit-btn:active {
+  transform: scale(1);
+}
+
+.footer-registration-login {
+  text-align: center;
+  font-size: 14px;
+  color: var(--footer-color);
+  background-color: var(--footer-backgroundcolor);
+  padding: 10px;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.footer-registration-login a {
+  color: var(--logo-color);
+  text-decoration: none;
+}
+
+.footer-registration-login a:hover {
+  text-decoration: underline;
+}
