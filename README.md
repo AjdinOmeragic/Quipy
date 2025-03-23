@@ -27,6 +27,6 @@
 
 ---
 
-## Database Schema (Planning Only)
+## Database Schema (Planning Only)))
 
 ![Database Schema](./Frontend/assets/img/DATABASE%20SCHEMA.png)
