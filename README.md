@@ -1,5 +1,6 @@
 # Quipy: A Mental Health Website
 
+## MileStone 1:
 **Quipy** is a Mental Health website designed to help users manage anxiety, depression, stress, and more. It offers a range of features to promote mental well-being, including:
 
 - **Motivational Quotes:** Inspirational messages.
