@@ -88,3 +88,6 @@ The **daoTest.php** file will output the following results, confirming that the 
 ### Summary
 
 Milestone 2 focuses on improving the backend functionality by implementing reusable DAO classes for CRUD operations, establishing a clean and efficient structure for future extensions. The goal is to simplify database interactions and ensure easy maintainability of the backend logic.
+
+M1
+M2
